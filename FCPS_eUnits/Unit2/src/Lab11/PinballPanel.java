@@ -13,6 +13,7 @@
    
       private BufferedImage myImage;
       private Graphics myBuffer;
+      private int ballr = 50;
       private Ball ball;
       private Timer t;
        public PinballPanel()
@@ -21,9 +22,9 @@
          myBuffer = myImage.getGraphics();
          myBuffer.setColor(BACKGROUND);
          myBuffer.fillRect(0, 0, FRAME,FRAME);
-         int xPos = (int)(Math.random()*(FRAME-100) + 50);
-         int yPos = (int)(Math.random()*(FRAME-100)+ 50);
-         ball = new Ball(xPos, yPos, 50, Color.BLUE);
+         int xPos = (int)(Math.random()*(FRAME-2*ballr) + ballr);
+         int yPos = (int)(Math.random()*(FRAME-2*ballr)+ ballr);
+         ball = new Ball(xPos, yPos, ballr, Color.BLUE);
         
          t = new Timer(10, new Listener());
          t.start();

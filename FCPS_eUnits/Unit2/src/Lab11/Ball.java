@@ -19,7 +19,7 @@
       }
       
      //modifier methods 
-       public void setdx(double x)        
+       public void setdx(double x) 
       {
          dx = x;
       }
