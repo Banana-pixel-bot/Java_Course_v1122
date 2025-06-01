@@ -20,6 +20,7 @@
          smidge.setThickness(6);
          smidge.drawShape();
          smidge = new SquareTurtle(100);
+         smidge.setColor(Color.orange);
          smidge.drawShape();
          
          smidge = new SquareTurtle(100,250,45,20);

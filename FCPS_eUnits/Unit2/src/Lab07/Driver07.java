@@ -8,7 +8,7 @@
       {
          JFrame frame = new JFrame("Polygon Turtles");
          frame.setSize(400, 400);
-         frame.setLocation(200, 100);
+         frame.setLocation(1000, 300);
          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          frame.setContentPane(new TurtlePanel());
          frame.setVisible(true);
