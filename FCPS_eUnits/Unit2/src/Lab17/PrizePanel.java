@@ -64,8 +64,8 @@
             myBuffer.drawString("Use 8 5 4 6 to control yellow ball's location",10,55);
             
             myBuffer.setColor(Color.RED);
-            myBuffer.setFont(new Font("Monospaced", Font.BOLD, 24));
-            myBuffer.drawString("Count: " + hits, FRAME + 250, 25);
+            myBuffer.setFont(new Font("Monospaced", Font.BOLD, 11));
+            myBuffer.drawString("Count: " + hits, 10, 70);
             
             repaint();
 
@@ -87,8 +87,8 @@
       private class Mouse extends MouseAdapter{
          public void mousePressed(MouseEvent e){
             if(e.getButton() == MouseEvent.BUTTON3){
-               ball.setX(e.getX());
-               ball.setY(e.getY());
+               ball.setX(e.getX() - ball.getRadius());
+               ball.setY(e.getY() - ball.getRadius());
             }
             else if(e.isShiftDown()){
                ball.setdx(Math.random()*12 - 6);
@@ -109,10 +109,10 @@
                ball.setY(ball.getY() + 20);
             }
             if(e.getKeyCode() == KeyEvent.VK_LEFT){
-               ball.setY(ball.getX() - 20);
+               ball.setX(ball.getX() - 20);
             }
             if(e.getKeyCode() == KeyEvent.VK_RIGHT){
-               ball.setY(ball.getX() + 20);
+               ball.setX(ball.getX() + 20);
             }
          
             if(e.getKeyCode() == KeyEvent.VK_NUMPAD8){
